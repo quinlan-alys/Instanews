@@ -5,6 +5,9 @@ $(function () {
     event.preventDefault();
     $(".loader").show();
 
+    
+   $( "img" ).removeClass( "logo", 2000, "easeOutQuad").addClass( "newLogo", 2000, "easeOutQuad");
+
     var e = $(".dropdown").val();
     $.ajax({
      method: "GET",
@@ -37,8 +40,7 @@ $(function () {
       })
       
      $('.content').append(content);
-     
-      // }
+      
     })
     .always(function(){
       $('.loader').hide()

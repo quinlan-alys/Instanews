@@ -28,6 +28,31 @@
     }
     }
     }
+.newLogo {
+    height: 75px;
+    margin-top: rem;
+@include tablet {
+     height: 75px;
+     margin-top: 2rem;
+@include desktop {
+    height: 75px;
+    margin-top: 0rem;
+}
+}
+}
+
+.newLogoDiv {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+@include tablet {
+    flex-flow: row wrap;
+@include desktop {
+    flex-flow: row wrap;
+}
+}
+}
 
 
 h2{
@@ -36,7 +61,6 @@ h2{
 .choose {
     margin-bottom: 1rem;
     font-family: "open_sanslight";
-    margin:0 auto;
     border-radius: 2px;
     display:flex;
     justify-content:center;
