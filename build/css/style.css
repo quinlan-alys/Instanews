@@ -47,8 +47,8 @@ table {
 
 @font-face {
   font-family: 'open_sanslight';
-  src: url("opensans-light-webfont.eot");
-  src: url("opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-light-webfont.woff") format("woff"), url("opensans-light-webfont.ttf") format("truetype"), url("opensans-light-webfont.svg#open_sanslight") format("svg");
+  src: url("../opensans-light-webfont.eot");
+  src: url("../opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../opensans-light-webfont.woff") format("woff"), url("../opensans-light-webfont.ttf") format("truetype"), url("../opensans-light-webfont.svg#open_sanslight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -76,12 +76,26 @@ h2 {
   margin: 0 auto;
   border-radius: 2px; }
 
+.abstract {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 286px;
+  position: absolute;
+  padding: 2rem;
+  text-align: left; }
+
+.images {
+  height: 400px;
+  width: 350px;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 footer {
   font-family: "open_sanslight";
   margin-top: 8rem;
   color: #c2c2c2; }
 
-@media all and (min-width: 600px) {
+@media all and (max-width: 600px) {
   body {
     -ms-flex-flow: row wrap;
         flex-flow: row wrap;
@@ -90,10 +104,17 @@ footer {
     text-align: right; }
   .nytlogo {
     margin-left: 30%; }
+  .content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
   .choose {
-    margin-top: 30%;
     -ms-flex: 2;
         flex: 2; }
+  .li {
+    -ms-flex: 0 1 50%;
+        flex: 0 1 50%; }
   footer {
     width: 100%; } }
 
@@ -101,5 +122,11 @@ footer {
   .nytlogo {
     margin-left: 10%; }
   p {
-    text-align: left;
-    margin-left: 10%; } }
+    text-align: left; }
+  .images {
+    width: 320px; }
+  .abstract {
+    max-width: 256px; }
+  .li {
+    -ms-flex: 0 1 25%;
+        flex: 0 1 25%; } }

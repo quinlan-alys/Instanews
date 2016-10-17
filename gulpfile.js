@@ -9,10 +9,20 @@ var reload = browsersync.reload;
 var eslint = require('gulp-eslint');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
+var notify = require('gulp-notify');
 //sass task
+
+var plumberErrorHandler={
+    errorHandler: notify.onError({
+        title: "gulp",
+        message: "Error: <%= error.message=%>" //will be notified if something is wrong. 
+    })
+}
+//SASS
 gulp.task('sass', function() {
    gulp.src('./sass/style.scss')
       .pipe(sass())
+      .pipe(plumber(plumberErrorHandler))
       .pipe(autoprefixer({
          browsers: ['last 2 versions']
       }))
@@ -70,11 +80,11 @@ gulp.task('watch', function() {
 });
 
 gulp.task('watch', function() {
-   gulp.watch('js/*.js', ['js', 'eslint']);
+   gulp.watch('js/*.js', ['serve', 'eslint']);
    gulp.watch('sass/*.scss', ['sass'])
 });
 
-gulp.task('default', [ 'browsersync', 'serve', 'watch', 'sass']);
+gulp.task('default', [ 'browsersync', 'serve', 'watch', 'sass', 'eslint']);
 
 
 

@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="stylesheet" href="build/css/style.min.css">
-        
-    
-
-        <title>Instanews</title>
-       
+        <title>Instanews</title>   
     </head>
-
         <body> 
-        
-
             <section class="nytlogo">
                     <img src="nyt-logo.svg" alt="logo">
             </section>
             <section class="choose">
                <h2> Choose a section: </h2>
-                <select id="dropdown">
+                <select class="dropdown">
                     <option value="" disabled selected> Sections...</option>
                     <option value="fashion">Fashion</option>
-                    <option value="tech">Technology</option>
-                    <option value="sports">Sports</option>
+                    <option value="technology">Technology</option>
+                    <option value="health">Health</option>
                     <option value="travel">Travel</option>
                     <option value="world">World</option>
-                    <option value="inter">International</option>
+                    <option value="arts">Arts</option>
+
                 </select>
+             <div class="nytArticles"  >
+                <ul class="content" style="display: flex;
+    flex-flow: row wrap;">     
+                </ul>
+            </div>
             </section>
             <footer>
                 <p> Copyright 2016 INSTANEWS
                 </p>
             </footer>
         </body>
-
-
-          <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
 </html>
            

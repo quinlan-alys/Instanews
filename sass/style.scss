@@ -29,6 +29,32 @@ h2{
     border-radius: 2px;
 }
 
+
+
+.nytArticles {
+    //display:flex;
+    //flex-flow: row wrap;
+}
+.abstract {
+  
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    max-width: 286px;
+    position: absolute;
+    padding: 2rem;
+    text-align: left;
+}
+
+.images {
+    height: 400px;
+    width:350px;
+   // margin-top: 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+
 footer {
 font-family: "open_sanslight";
 margin-top: 8rem;
@@ -36,7 +62,7 @@ color: #c2c2c2;
 }
 
 
-@media all and (min-width: 600px) {
+@media all and (max-width: 600px) {
 
     body {
     
@@ -51,11 +77,18 @@ color: #c2c2c2;
         margin-left:30%;
     }
 
-    .choose{
-        margin-top: 30%;
-        flex: 2;
+    .content {
+        display:flex;
+        flex-flow: row wrap;
     }
 
+    .choose{
+        //margin-top: 30%;
+        flex: 2;
+    }
+    .li {
+        flex: 0 1 50%;
+    }
     footer{
     width: 100%;
     }
@@ -72,7 +105,18 @@ color: #c2c2c2;
 
     p {
         text-align:left;
-        margin-left: 10%;
+       // margin-left: 10%;
     }
 
+    .images {
+        width: 320px;
+    }
+
+    .abstract {
+        max-width: 256px;
+    }
+
+    .li {
+        flex: 0 1 25%;
+    }
 }
