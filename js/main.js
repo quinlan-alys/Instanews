@@ -15,7 +15,7 @@ $(function () {
       //debugger;
       
       var info = data.results
-
+      
       .filter(function(e){
         return e.multimedia.length
       })
@@ -41,7 +41,12 @@ $(function () {
       // }
     })
     .always(function(){
-      $('.loader').hide();
+      $('.loader').hide()
+    })
+
+      .fail(function() {
+      $('.error').show();
+   
     });
   });
 });

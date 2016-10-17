@@ -52,20 +52,35 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-body {
-  background-color: black;
-  color: white;
-  text-align: center;
+.nytlogo {
+  margin-top: 7rem;
+  margin-bottom: 2rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column wrap;
       flex-flow: column wrap;
-  font-size: 12px; }
+  margin: 0 auto;
+  padding: 2rem; }
+  @media (min-width: 600px) {
+    .nytlogo {
+      margin-left: 30%;
+      margin-top: 4rem;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; } }
+  @media (min-width: 600px) and (min-width: 1000px) {
+    .nytlogo {
+      margin-left: 5%; } }
 
-.nytlogo {
-  height: 200%;
-  margin-top: 7rem;
-  margin-bottom: 2rem; }
+.logo {
+  height: 200px; }
+  @media (min-width: 600px) {
+    .logo {
+      height: 125px; } }
+  @media (min-width: 600px) and (min-width: 1000px) {
+    .logo {
+      height: 200px; } }
 
 h2 {
   margin: 1rem; }
@@ -77,11 +92,13 @@ h2 {
   border-radius: 2px;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
   -ms-flex-direction: column;
       flex-direction: column; }
 
 .dropdown {
-  width: 150px;
+  width: 100px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center; }
@@ -95,6 +112,30 @@ h2 {
       align-self: center;
   display: none; }
 
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  font-size: 12px; }
+
+footer {
+  font-family: "open_sanslight";
+  margin-top: 2rem;
+  margin: 0 auto;
+  color: #c2c2c2; }
+  @media (min-width: 600px) {
+    footer {
+      width: 100%;
+      margin: 0 auto; } }
+  @media (min-width: 600px) and (min-width: 1000px) {
+    footer {
+      text-align: left;
+      margin-left: 10%; } }
+
 .content {
   display: -ms-flexbox;
   display: flex;
@@ -102,17 +143,23 @@ h2 {
       flex-flow: row wrap;
   -ms-flex-pack: center;
       justify-content: center;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  width: 100%; }
+
+.nytArticles {
+  width: 100%; }
 
 .abstract {
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   max-width: 600px;
+  font-family: "open_sanslight";
   position: absolute;
   padding: 3rem;
   font-size: 16px;
   line-height: 1rem;
-  text-align: left; }
+  text-align: left;
+  bottom: 0; }
 
 a {
   display: -ms-flexbox;
@@ -130,53 +177,23 @@ a {
   -ms-flex-align: end;
       align-items: flex-end; }
 
-li {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: end;
-      align-items: flex-end; }
-
-footer {
+.error {
   font-family: "open_sanslight";
-  margin-top: 8rem;
-  color: #c2c2c2; }
+  color: white;
+  display: none; }
 
-@media all and (min-width: 600px) {
-  body {
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    max-width: 600px; }
-  .logo {
-    height: 125px; }
-  p {
-    text-align: right; }
-  .nytlogo {
-    margin-left: 30%; }
-  .content {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap; }
-  .choose {
-    -ms-flex-pack: center;
-        justify-content: center;
-    margin-top: 3rem;
-    margin-left: 0; }
-  .li {
-    -ms-flex: 0 1 50%;
-        flex: 0 1 50%; }
-  footer {
-    width: 100%; } }
-
-@media all and (min-width: 1240px) {
-  .nytlogo {
-    margin-left: 10%; }
-  p {
-    text-align: left; }
-  .images {
-    max-width: 600px; }
-  .abstract {
-    max-width: 600px; }
-  .li {
-    -ms-flex: 0 1 25%;
-        flex: 0 1 25%; } }
+li {
+  max-width: 100%;
+  -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
+  position: relative; }
+  @media (min-width: 600px) {
+    li {
+      max-width: 50%;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%; } }
+  @media (min-width: 600px) and (min-width: 1000px) {
+    li {
+      max-width: 25%;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%; } }

@@ -7,10 +7,10 @@
         <title>Instanews</title>   
     </head>
         <body> 
-            <section class="nytlogo">
+            <header class="nytlogo">
                     <img src="nyt-logo.svg" alt="logo" class="logo">
-            </section>
-            <section class="choose">
+           
+            <div class="choose">
                <h2> Choose a section: </h2>
                 <select class="dropdown">
                     <option value="" disabled selected> Sections...</option>
@@ -23,13 +23,16 @@
 
                 </select>
                 <img src="ajax-loader.gif" alt="loader" class="loader">
+                </div>
+                 </header>
+            
              <div class="nytArticles">
-                <ul class="content" >     
-                </ul>
+                <ul class="content" > <p class="error">Sorry there was an error.
+                </p></ul>
             </div>
-            </section>
+           
             <footer>
-                <p> Copyright 2016 INSTANEWS
+                <p> © Copyright 2016 INSTANEWS
                 </p>
             </footer>
         </body>

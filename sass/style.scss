@@ -1,70 +1,37 @@
 @import "reset"; 
 @import "fonts";
+@import "mixins";
+@import "header";
+@import "body";
+@import "footer";
 
-
-
-
-body {
-    background-color:black;
-    color: white;
-    text-align: center;
-    display:flex;
-    flex-flow: column wrap;
-    font-size: 12px;
-}
-
-.nytlogo {
-    height:200%;
-    margin-top: 7rem;
-    margin-bottom: 2rem;
-}
-
-h2{
-    margin: 1rem;
-}
-.choose {
-    margin-bottom: 1rem;
-    font-family: "open_sanslight";
-    margin:0 auto;
-    border-radius: 2px;
-    display:flex;
-    flex-direction:column;
-}
-
-.dropdown {
-    width: 150px;
-    align-self: center;
-}
-
-.loader {
-   height: 2rem;
-    width: 2rem;
-    margin: 2rem;
-    align-self: center;
-    display:none;
-}
+//NYT API STYLING
 
 .content {
         display:flex;
         flex-flow: row wrap;
         justify-content: center;
         margin-top: 2rem;
+        width: 100%;
+
     }
 
 .nytArticles {
-    //display:flex;
-    //flex-flow: row wrap;
+    width: 100%;
 }
+
 .abstract {
   
     color: #fff;
     background: rgba(0,0,0,.5);
     max-width: 600px;
+    font-family:"open_sanslight";
     position: absolute;
     padding: 3rem;
     font-size: 16px;
     line-height: 1rem;
     text-align: left;
+    bottom: 0;
 }
 
 a {
@@ -75,87 +42,37 @@ a {
 .images {
     height: 400px;
     width:600px;
-   // margin-top: 20%;
     background-size: cover;
     background-repeat: no-repeat;
     display:flex;
-    align-items:flex-end;
-   
+    align-items:flex-end; 
+}
+
+.error {
+    font-family: "open_sanslight";
+    color: white;
+    display:none;
 }
 
 li {
-    display:flex;
-    align-items: flex-end;
-}
-
-
-footer {
-font-family: "open_sanslight";
-margin-top: 8rem;
-color: #c2c2c2;
-}
-
-
-@media all and (min-width: 600px) {
-
-    body {
+    max-width:100%;
+    flex: 1 1 100%;
+    position: relative; 
     
-        flex-flow: row wrap;
-        max-width: 600px;
-    
+    @include tablet {
+        max-width:50%;
+        flex: 1 1 50%;
+
+    @include desktop {
+        max-width:25%;
+        flex: 1 1 25%;
     }
 
-    .logo {
-        height: 125px;
-    }
-    p {
-        text-align:right;
-    }
-    .nytlogo {
-        margin-left:30%;
-    }
-
-    .content {
-        display:flex;
-        flex-flow: row wrap;
-    }
-
-    .choose{
-        justify-content:center;
-        margin-top:3rem;
-        margin-left:0;
-    }
-    .li {
-        flex: 0 1 50%;
-    }
-    footer{
-    width: 100%;
     }
 }
 
-@media all and (min-width: 1240px){
 
-    
 
-    .nytlogo {
-        margin-left:10%;
 
-    }
 
-    p {
-        text-align:left;
-       // margin-left: 10%;
-    }
-
-    .images {
-        max-width: 600px;
-    }
-
-    .abstract {
-        max-width: 600px;
-    }
-
-    .li {
-        flex: 0 1 25%;
-    }
-}
+  
