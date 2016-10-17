@@ -60,7 +60,7 @@ body {
   display: flex;
   -ms-flex-flow: column wrap;
       flex-flow: column wrap;
-  font-size: 16px; }
+  font-size: 12px; }
 
 .nytlogo {
   height: 200%;
@@ -74,32 +74,80 @@ h2 {
   margin-bottom: 1rem;
   font-family: "open_sanslight";
   margin: 0 auto;
-  border-radius: 2px; }
+  border-radius: 2px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.dropdown {
+  width: 150px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
+
+.loader {
+  height: 2rem;
+  width: 2rem;
+  margin: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: none; }
+
+.content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-top: 2rem; }
 
 .abstract {
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
-  max-width: 286px;
+  max-width: 600px;
   position: absolute;
-  padding: 2rem;
+  padding: 3rem;
+  font-size: 16px;
+  line-height: 1rem;
   text-align: left; }
+
+a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end; }
 
 .images {
   height: 400px;
-  width: 350px;
+  width: 600px;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end; }
+
+li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end; }
 
 footer {
   font-family: "open_sanslight";
   margin-top: 8rem;
   color: #c2c2c2; }
 
-@media all and (max-width: 600px) {
+@media all and (min-width: 600px) {
   body {
     -ms-flex-flow: row wrap;
         flex-flow: row wrap;
     max-width: 600px; }
+  .logo {
+    height: 125px; }
   p {
     text-align: right; }
   .nytlogo {
@@ -110,8 +158,10 @@ footer {
     -ms-flex-flow: row wrap;
         flex-flow: row wrap; }
   .choose {
-    -ms-flex: 2;
-        flex: 2; }
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-top: 3rem;
+    margin-left: 0; }
   .li {
     -ms-flex: 0 1 50%;
         flex: 0 1 50%; }
@@ -124,9 +174,9 @@ footer {
   p {
     text-align: left; }
   .images {
-    width: 320px; }
+    max-width: 600px; }
   .abstract {
-    max-width: 256px; }
+    max-width: 600px; }
   .li {
     -ms-flex: 0 1 25%;
         flex: 0 1 25%; } }

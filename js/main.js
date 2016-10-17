@@ -3,6 +3,7 @@ $(function () {
   
   $(".dropdown").on("change", function (event) {
     event.preventDefault();
+    $(".loader").show();
 
     var e = $(".dropdown").val();
     $.ajax({
@@ -14,7 +15,7 @@ $(function () {
       //debugger;
       
       var info = data.results
-      
+
       .filter(function(e){
         return e.multimedia.length
       })
@@ -32,14 +33,17 @@ $(function () {
           content += '<p class="abstract">' + value.abstract + '</p>';
           content +='<div class="images" style ="background-image: url(' + value.multimedia[4].url + ')" ></div>';  
           content += '</a></li>';
-              
               }
       })
-
-  
-    
+      
      $('.content').append(content);
+     
       // }
+    })
+    .always(function(){
+      $('.loader').hide();
     });
   });
 });
+ // });
+//});
