@@ -11,7 +11,7 @@ $(function () {
     var e = $('.dropdown').val();
     $.ajax({
       method: 'GET',
-      url: 'https://api.nytimes.com/svc/topstories/v2/' + e + '.json?api-key=faf182c430e74acea801d91d37d25420/',
+      url: 'https://api.nytimes.com/svc/topstories/v2/' + e + '.json?api-key=98e823a3d9954d40bd51888d331553cf',
     }).done(function (data) {
       $('.content').empty();
       var content = '';
