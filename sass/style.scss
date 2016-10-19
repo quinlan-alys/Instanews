@@ -13,11 +13,21 @@
         justify-content: center;
         margin-top: 2rem;
         width: 100%;
+        overflow:hidden;
 
     }
 
+
+a:hover .abstract{
+  bottom: 0;
+}
+
 .nytArticles {
     width: 100%;
+}
+
+.abstract{ 
+  transition: 0.30s; 
 }
 
 .abstract {
@@ -27,11 +37,12 @@
     max-width: 600px;
     font-family:"open_sanslight";
     position: absolute;
-    padding: 3rem;
+    padding: 1rem;
     font-size: 16px;
-    line-height: 1rem;
+    line-height: 1.5rem;
     text-align: left;
-    bottom: 0;
+    bottom: -200px;
+   // margin-top: 5em;
 }
 
 a {

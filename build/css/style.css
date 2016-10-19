@@ -163,6 +163,9 @@ footer {
       text-align: left;
       margin-left: 10%; } }
 
+.insta {
+  text-transform: uppercase; }
+
 .content {
   display: -ms-flexbox;
   display: flex;
@@ -171,10 +174,17 @@ footer {
   -ms-flex-pack: center;
       justify-content: center;
   margin-top: 2rem;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
+
+a:hover .abstract {
+  bottom: 0; }
 
 .nytArticles {
   width: 100%; }
+
+.abstract {
+  transition: 0.30s; }
 
 .abstract {
   color: #fff;
@@ -182,11 +192,11 @@ footer {
   max-width: 600px;
   font-family: "open_sanslight";
   position: absolute;
-  padding: 3rem;
+  padding: 1rem;
   font-size: 16px;
-  line-height: 1rem;
+  line-height: 1.5rem;
   text-align: left;
-  bottom: 0; }
+  bottom: -200px; }
 
 a {
   display: -ms-flexbox;

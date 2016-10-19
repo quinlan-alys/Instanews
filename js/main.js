@@ -6,7 +6,7 @@ $(function () {
     $('.loader').show();
 
 
-    $('img').removeClass('logo').addClass('newLogo');
+  $('img').removeClass('logo').addClass('newLogo');
 
     var e = $('.dropdown').val();
     $.ajax({
