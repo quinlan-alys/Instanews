@@ -148,7 +148,7 @@ li {
 
 .newLogo {
   height: 75px;
-  margin-top: rem; }
+  /*margin-top: rem;*/ }
   @media (min-width: 600px) {
     .newLogo {
       height: 75px;
