@@ -1,3 +1,4 @@
+/*header styles*/
 
 .nytlogo {
     margin-top: 7rem;
@@ -7,38 +8,43 @@
     margin: 0 auto;
     padding: 2rem;
 
-@include tablet {
-        margin-left:30%;
+    @include tablet {
+        margin-left: 30%;
         margin-top: 4rem;
-        display:flex;
-        flex-flow:row wrap;
-    
-@include desktop {
-        margin-left:5%;
-}
-}
+        display: flex;
+        flex-flow: row wrap;
+    }        
+        
+    @include desktop {
+        margin-left: 5%;
+    }
 }
 
-  .logo {
-        height: 200px;
+.logo {
+    height: 200px;
+
     @include tablet {
         height: 125px;
+    }
+
     @include desktop {
         height: 200px;
     }
-    }
-    }
+}
+
 .newLogo {
     height: 75px;
-    margin-top: rem;
-@include tablet {
-     height: 75px;
-     margin-top: 2rem;
-@include desktop {
-    height: 75px;
-    margin-top: 0rem;
-}
-}
+    /*margin-top: rem;*/
+
+    @include tablet {
+        height: 75px;
+        margin-top: 2rem;
+    }
+
+    @include desktop {
+        height: 75px;
+        margin-top: 0rem;
+    }
 }
 
 .newLogoDiv {
@@ -46,25 +52,27 @@
     margin-bottom: 2rem;
     display: flex;
     flex-flow: column wrap;
-@include tablet {
-    flex-flow: row wrap;
-@include desktop {
-    flex-flow: row wrap;
-}
-}
-}
 
+    @include tablet {
+        flex-flow: row wrap;
+    }
+
+    @include desktop {
+        flex-flow: row wrap;
+    }
+}
 
 h2{
     margin: 1rem;
 }
+
 .choose {
     margin-bottom: 1rem;
     font-family: "open_sanslight";
     border-radius: 2px;
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .dropdown {
@@ -73,7 +81,7 @@ h2{
 }
 
 .loader {
-   height: 2rem;
+    height: 2rem;
     width: 2rem;
     margin: 2rem;
     align-self: center;

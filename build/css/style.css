@@ -45,13 +45,78 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*fonts*/
 @font-face {
   font-family: 'open_sanslight';
-  src: url("../opensans-light-webfont.eot");
-  src: url("../opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../opensans-light-webfont.woff") format("woff"), url("../opensans-light-webfont.ttf") format("truetype"), url("../opensans-light-webfont.svg#open_sanslight") format("svg");
+  src: url("../../fonts/opensans-light-webfont.eot");
+  src: url("../../fonts/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/opensans-light-webfont.woff") format("woff"), url("../../fonts/opensans-light-webfont.ttf") format("truetype"), url("../../fonts/opensans-light-webfont.svg#open_sanslight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
+/*base styles*/
+.content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-top: 2rem;
+  width: 100%; }
+
+.nytArticles {
+  width: 100%; }
+
+.abstract {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  font-family: "open_sanslight";
+  position: absolute;
+  padding: 3rem;
+  font-size: 16px;
+  line-height: 1rem;
+  text-align: left;
+  bottom: 0; }
+
+a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end; }
+
+.images {
+  height: 400px;
+  width: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end; }
+
+.error {
+  font-family: "open_sanslight";
+  color: white;
+  display: none; }
+
+li {
+  max-width: 100%;
+  -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
+  position: relative; }
+  @media (min-width: 600px) {
+    li {
+      max-width: 50%;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%; } }
+  @media (min-width: 1000px) {
+    li {
+      max-width: 25%;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%; } }
+
+/*header styles*/
 .nytlogo {
   margin-top: 7rem;
   margin-bottom: 2rem;
@@ -69,7 +134,7 @@ table {
       display: flex;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; } }
-  @media (min-width: 600px) and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     .nytlogo {
       margin-left: 5%; } }
 
@@ -78,18 +143,18 @@ table {
   @media (min-width: 600px) {
     .logo {
       height: 125px; } }
-  @media (min-width: 600px) and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     .logo {
       height: 200px; } }
 
 .newLogo {
   height: 75px;
-  margin-top: rem; }
+  /*margin-top: rem;*/ }
   @media (min-width: 600px) {
     .newLogo {
       height: 75px;
       margin-top: 2rem; } }
-  @media (min-width: 600px) and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     .newLogo {
       height: 75px;
       margin-top: 0rem; } }
@@ -105,7 +170,7 @@ table {
     .newLogoDiv {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; } }
-  @media (min-width: 600px) and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     .newLogoDiv {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; } }
@@ -139,6 +204,7 @@ h2 {
       align-self: center;
   display: none; }
 
+/*body styles*/
 body {
   background-color: black;
   color: white;
@@ -149,6 +215,7 @@ body {
       flex-flow: column wrap;
   font-size: 12px; }
 
+/*footer styles*/
 footer {
   font-family: "open_sanslight";
   margin-top: 2rem;
@@ -158,10 +225,11 @@ footer {
     footer {
       width: 100%;
       margin: 0 auto; } }
-  @media (min-width: 600px) and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     footer {
       text-align: left;
       margin-left: 10%; } }
+<<<<<<< HEAD
 
 .insta {
   text-transform: uppercase; }
@@ -234,3 +302,5 @@ li {
       max-width: 25%;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%; } }
+=======
+>>>>>>> 448bacdfebc80bb36549c009520981a0ce5deeda
