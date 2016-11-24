@@ -1,8 +1,7 @@
 ## Instanews:
+![Alt Text](instanewsscreenshot.png)
 
-A fun and interesting project for redAcademy Web Development Fall 2016. Select the topic of your choice and view the latest and trending articles!
-
-\*more description for the abstract needed\*
+Instanews is a simple website built to fetch news stories from the New York Times. Choose one of the catagories from the menu, and you will receive 12 of the most popular and trending articles of that genre. 
 
 # Technologies Used
 - SCSS
@@ -15,4 +14,4 @@ A fun and interesting project for redAcademy Web Development Fall 2016. Select t
 - Gulp
 
 #Personal Learnings
-\*Personal learning description needed\*
+This is my first time working with AJAX and api fetching. From building this project, I learned how to sort through JSON and correctly draw the information I need. I then learned how to structure the Javascript in order to present that information correctly. I also incorporated a CSS transition into this site with the NYT logo. This could be improved with an animation that allows the logo to slide over more gracefully.   
