@@ -6,10 +6,11 @@ var plumber = require('gulp-plumber');
 var coffee = require('gulp-coffee');
 var sass = require('gulp-sass');
 var reload = browsersync.reload;
-var eslint = require('gulp-eslint');
+//var eslint = require('gulp-eslint');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var notify = require('gulp-notify');
+var babel = require('gulp-babel');
 //sass task
 
 var plumberErrorHandler={
@@ -32,30 +33,25 @@ gulp.task('sass', function() {
       .pipe(gulp.dest('./build/css'));
 });
 
-
-gulp.task('eslint', function() {
-  return gulp.src('js/*.js')
-  .pipe(eslint())
-  .pipe(eslint.format())
-  // Brick on failure to be super strict
-  .pipe(eslint.failOnError());
-});
- 
-gulp.task('default', ['eslint'], function () {
-    console.log('heeey')
-});
+// gulp.task('default', ['eslint'], function () {
+//     console.log('heeey')
+// });
  
 
-gulp.task('plumba', function (){
-gulp.src('./src/*.ext')
-    .pipe(plumber())
-    .pipe(coffee())
-    .pipe(gulp.dest('./dist'))
+// gulp.task('plumba', function (){
+// gulp.src('./src/*.ext')
+//     .pipe(plumber())
+//     .pipe(gulp.dest('./dist'))
 
-});
+// });
  
  gulp.task('serve', function(){ //runs a take that we named default
    gulp.src('./js/*.js') //what files do we want to be absorbed by gulp
+      .pipe(babel())
+      //.pipe(eslint())
+      //.pipe(eslint.format())
+    // Brick on failure to be super strict
+      .pipe(eslint.failOnError())
       .pipe(uglify()) // enable uglify, minifies... pipe chains things together
       .pipe(rename({ extname: '.min.js' })) //  give new name to uglify file to .js
       .pipe(gulp.dest('./build/js')) // location to put results? build file.
@@ -75,16 +71,16 @@ gulp.task('browsersync', function () {
 });
 
 gulp.task('watch', function() {
-   gulp.watch('js/*.js', ['scripts', 'plumba', 'sass',]);
+   gulp.watch('js/*.js', ['scripts', 'sass',]);
    gulp.watch('sass/*.scss', ['sass'])
 });
 
 gulp.task('watch', function() {
-   gulp.watch('js/*.js', ['serve', 'eslint']);
+   gulp.watch('js/*.js', ['serve' ]); //eslint
    gulp.watch('sass/*.scss', ['sass'])
 });
 
-gulp.task('default', [ 'browsersync', 'serve', 'watch', 'sass', 'eslint']);
+gulp.task('default', [ 'browsersync', 'serve', 'watch', 'sass']);
 
 
 
