@@ -8,6 +8,7 @@
     margin: 0 auto;
     padding: 2rem;
 
+
     @include tablet {
         margin-left: 30%;
         margin-top: 4rem;
@@ -21,20 +22,19 @@
 }
 
 .logo {
-    height: 200px;
+    height: 50vh;
 
     @include tablet {
-        height: 125px;
+        height: 50vh;
     }
 
     @include desktop {
-        height: 200px;
+        height: 50vh;
     }
 }
 
 .newLogo {
     height: 75px;
-    /*margin-top: rem;*/
 
     @include tablet {
         height: 75px;
